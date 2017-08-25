@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".activity.CoordinatorActivity"/>
         <activity android:name=".activity.ProgressActivity"/>
+        <activity android:name=".activity.RxJavaActivity"/>
     </application>
 
 </manifest>

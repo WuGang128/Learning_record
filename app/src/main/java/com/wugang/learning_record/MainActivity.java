@@ -6,11 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.wugang.learning_record.activity.CoordinatorActivity;
 import com.wugang.learning_record.activity.ProgressActivity;
+import com.wugang.learning_record.activity.RxJavaActivity;
 import com.wugang.learning_record.widget.BubbleView;
 
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 public class MainActivity extends AppCompatActivity {
     private BubbleView bubbleView;
@@ -18,10 +27,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         findViewById(R.id.btn_sinkview).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ProgressActivity.class));
+            }
+        });
+        findViewById(R.id.btn_coordinator).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,CoordinatorActivity.class));
+            }
+        });
+        findViewById(R.id.btn_rxjava).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,RxJavaActivity.class));
             }
         });
         bubbleView = (BubbleView) findViewById(R.id.BubbleView);

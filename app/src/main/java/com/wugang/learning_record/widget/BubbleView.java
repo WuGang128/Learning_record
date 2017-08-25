@@ -11,17 +11,13 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-
 import com.wugang.learning_record.R;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 
 /**
  * Created by Yasic on 2016/6/1.
@@ -128,39 +124,39 @@ public class BubbleView extends RelativeLayout{
     }
 
     public void startAnimation(final int rankWidth, final int rankHeight){
-        Observable.timer(innerDelay, TimeUnit.MILLISECONDS)
-                .repeat((int)(Math.random() * (maxHeartNum - minHeartNum)) + minHeartNum)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<Long>() {
-                    @Override
-                    public void call(Long aLong) {
-                        bubbleAnimation(rankWidth, rankHeight);
-                    }
-                });
+//        Observable.timer(innerDelay, TimeUnit.MILLISECONDS)
+//                .repeat((int)(Math.random() * (maxHeartNum - minHeartNum)) + minHeartNum)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Action1<Long>() {
+//                    @Override
+//                    public void call(Long aLong) {
+//                        bubbleAnimation(rankWidth, rankHeight);
+//                    }
+//                });
     }
 
     public void startAnimation(final int rankWidth, final int rankHeight, int count){
-        Observable.timer(innerDelay, TimeUnit.MILLISECONDS)
-                .repeat(count)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<Long>() {
-                    @Override
-                    public void call(Long aLong) {
-                        bubbleAnimation(rankWidth, rankHeight);
-                    }
-                });
+//        Observable.timer(innerDelay, TimeUnit.MILLISECONDS)
+//                .repeat(count)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Action1<Long>() {
+//                    @Override
+//                    public void call(Long aLong) {
+//                        bubbleAnimation(rankWidth, rankHeight);
+//                    }
+//                });
     }
 
     public void startAnimation(final int rankWidth, final int rankHeight, int delay, int count){
-        Observable.timer(delay, TimeUnit.MILLISECONDS)
-                .repeat(count)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<Long>() {
-                    @Override
-                    public void call(Long aLong) {
-                        bubbleAnimation(rankWidth, rankHeight);
-                    }
-                });
+//        Observable.timer(delay, TimeUnit.MILLISECONDS)
+//                .repeat(count)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Action1<Long>() {
+//                    @Override
+//                    public void call(Long aLong) {
+//                        bubbleAnimation(rankWidth, rankHeight);
+//                    }
+//                });
     }
 
     private void bubbleAnimation(int rankWidth, int rankHeight){

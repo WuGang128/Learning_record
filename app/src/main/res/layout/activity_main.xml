@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.wugang.learning_record.MainActivity">
    <Button
        android:id="@+id/btn_sinkview"
@@ -12,8 +13,21 @@
        android:layout_height="wrap_content"
        android:text="SinkView"
        />
+   <Button
+       android:id="@+id/btn_coordinator"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="coordinator"
+       />
+   <Button
+       android:id="@+id/btn_rxjava"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="rxjava"
+       />
    <com.wugang.learning_record.widget.BubbleView
        android:id="@+id/BubbleView"
+       android:visibility="gone"
        android:layout_width="match_parent"
        android:layout_height="match_parent">
    </com.wugang.learning_record.widget.BubbleView>
